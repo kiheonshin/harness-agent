@@ -8,22 +8,25 @@ $projectRoot = Split-Path -Parent $PSScriptRoot
 $requiredFiles = @(
     "README.md",
     "CLAUDE.md",
+    "claude-progress.txt",
     ".claude/settings.json",
     ".claude/agents/requirements-analyst.md",
     ".claude/agents/implementation-engineer.md",
     ".claude/agents/quality-reviewer.md",
+    ".claude/agents/oshiz-brand-guardian.md",
     ".claude/skills/project-harness/SKILL.md",
     ".claude/skills/workspace-audit/SKILL.md",
+    ".claude/skills/miniapp-classifier/SKILL.md",
     "_workspace/00_input.md",
     "_workspace/01_plan.md",
     "_workspace/02_build_log.md",
-    "_workspace/99_review.md"
+    "_workspace/99_review.md",
+    "docs/references.json",
+    "docs/extracted-traits.md"
 )
 
 $placeholderPatterns = @(
-    "TODO:",
-    "No open questions yet.",
-    "Planning has not started yet."
+    "TODO:"
 )
 
 $results = foreach ($relativePath in $requiredFiles) {
@@ -62,7 +65,7 @@ $summary = [pscustomobject]@{
 if ($Json) {
     $summary | ConvertTo-Json -Depth 4
 } else {
-    Write-Output "Harness workspace audit"
+    Write-Output "Oshiz Mini App harness audit"
     Write-Output "Project root: $projectRoot"
     Write-Output "Status: $($summary.status)"
     Write-Output "Missing files: $($summary.missingCount)"

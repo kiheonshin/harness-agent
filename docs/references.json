@@ -1,0 +1,49 @@
+{
+  "_comment": "Oshiz Mini App 하네스가 선택적으로 참조하는 외부 문서 레지스트리.",
+  "documents": [
+    {
+      "id": "harness-design-doc",
+      "name": "하네스 에이전트 설계 문서",
+      "url": "https://www.notion.so/vivident/32540659e42480feb1bde988bab66ff4",
+      "purpose": "하네스 아키텍처, 워크플로, 분류 체계, 튜닝 가이드",
+      "stability": "semi-stable",
+      "when": "하네스 규칙 변경, 온보딩, 아키텍처 참조 시"
+    },
+    {
+      "id": "oshiz-identity",
+      "name": "Oshiz Core Identity / Whitepaper",
+      "url": "",
+      "purpose": "브랜드, 캐릭터, 세계관 규칙, 제품 비전",
+      "stability": "stable",
+      "when": "IP/캐릭터 관련 신규 프로젝트 시작 시",
+      "_status": "URL 미등록 — 문서 확정 후 추가"
+    },
+    {
+      "id": "miniapp-platform-bg",
+      "name": "Mini-App Platform Background",
+      "url": "",
+      "purpose": "플랫폼 아키텍처, 통합 포인트, 기술 스택",
+      "stability": "semi-stable",
+      "when": "메인 플랫폼과의 연결 기획 시",
+      "_status": "URL 미등록 — 문서 확정 후 추가"
+    },
+    {
+      "id": "demo-app-history",
+      "name": "Demo App Development History",
+      "url": "",
+      "purpose": "과거 프로젝트 이력, 교훈, 재사용 패턴",
+      "stability": "semi-stable",
+      "when": "재사용 가능한 패턴 탐색 시",
+      "_status": "URL 미등록 — 문서 확정 후 추가"
+    },
+    {
+      "id": "strategy-proposal",
+      "name": "Strategy Proposal",
+      "url": "",
+      "purpose": "비즈니스 방향, 우선순위, 로드맵",
+      "stability": "volatile",
+      "when": "스코프 결정, 우선순위 판단 시",
+      "_status": "URL 미등록 — 문서 확정 후 추가"
+    }
+  ]
+}
