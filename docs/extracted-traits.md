@@ -51,7 +51,12 @@
 ### 7. Knowledge Strategy
 
 - 외부 문서는 `docs/references.json` 레지스트리를 통해 선택적으로 읽는다.
-- Notion이 기본 지식 저장소지만, 연결이 실패해도 로컬 파일만으로 핵심 워크플로가 동작해야 한다.
+- 사용자는 문서 제공 방법을 세 가지 중 선택할 수 있다.
+  - **방법 A (파일 첨부)**: 대화에 파일을 직접 첨부 — 에이전트가 그대로 읽음
+  - **방법 B (URL 붙여넣기)**: URL을 대화에 제공 — 에이전트가 `WebFetch`로 읽음
+  - **방법 C (Notion MCP)**: Notion MCP 연결 시 `notion_search_query`로 에이전트가 자동 탐색
+- URL을 코드나 설정 파일에 직접 기재하지 않는다.
+- 어떤 방법도 동작하지 않으면 로컬 파일만으로 핵심 워크플로가 동작해야 한다.
 
 ## How This Variant Uses The Traits
 

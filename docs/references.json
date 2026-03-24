@@ -1,49 +1,55 @@
 {
-  "_comment": "Oshiz Mini App 하네스가 선택적으로 참조하는 외부 문서 레지스트리.",
+  "_comment": "Oshiz Mini App 하네스가 선택적으로 참조하는 외부 문서 레지스트리. 사용자는 access_methods에 나열된 방법 중 하나를 선택해 문서를 제공할 수 있다.",
+  "access_methods_guide": {
+    "attachment": "사용자가 대화에 파일을 직접 첨부 — 에이전트가 첨부 내용을 그대로 읽음",
+    "url": "사용자가 URL을 붙여넣기 — 에이전트가 WebFetch로 읽음, 코드에 URL 미기재",
+    "notion-mcp": "Notion MCP 자동 탐색 — notion_search_query로 notion-search 후 notion-fetch"
+  },
   "documents": [
     {
       "id": "harness-design-doc",
       "name": "하네스 에이전트 설계 문서",
-      "url": "https://www.notion.so/vivident/32540659e42480feb1bde988bab66ff4",
+      "notion_search_query": "하네스 에이전트 설계",
       "purpose": "하네스 아키텍처, 워크플로, 분류 체계, 튜닝 가이드",
       "stability": "semi-stable",
-      "when": "하네스 규칙 변경, 온보딩, 아키텍처 참조 시"
+      "when": "하네스 규칙 변경, 온보딩, 아키텍처 참조 시",
+      "access_methods": ["notion-mcp", "attachment", "url"]
     },
     {
       "id": "oshiz-identity",
       "name": "Oshiz Core Identity / Whitepaper",
-      "url": "",
+      "notion_search_query": "Oshiz identity whitepaper",
       "purpose": "브랜드, 캐릭터, 세계관 규칙, 제품 비전",
       "stability": "stable",
       "when": "IP/캐릭터 관련 신규 프로젝트 시작 시",
-      "_status": "URL 미등록 — 문서 확정 후 추가"
+      "access_methods": ["attachment", "url", "notion-mcp"]
     },
     {
       "id": "miniapp-platform-bg",
       "name": "Mini-App Platform Background",
-      "url": "",
+      "notion_search_query": "mini app platform background",
       "purpose": "플랫폼 아키텍처, 통합 포인트, 기술 스택",
       "stability": "semi-stable",
       "when": "메인 플랫폼과의 연결 기획 시",
-      "_status": "URL 미등록 — 문서 확정 후 추가"
+      "access_methods": ["attachment", "url", "notion-mcp"]
     },
     {
       "id": "demo-app-history",
       "name": "Demo App Development History",
-      "url": "",
+      "notion_search_query": "demo app 개발 이력",
       "purpose": "과거 프로젝트 이력, 교훈, 재사용 패턴",
       "stability": "semi-stable",
       "when": "재사용 가능한 패턴 탐색 시",
-      "_status": "URL 미등록 — 문서 확정 후 추가"
+      "access_methods": ["attachment", "notion-mcp", "url"]
     },
     {
       "id": "strategy-proposal",
       "name": "Strategy Proposal",
-      "url": "",
+      "notion_search_query": "strategy proposal Oshiz",
       "purpose": "비즈니스 방향, 우선순위, 로드맵",
       "stability": "volatile",
       "when": "스코프 결정, 우선순위 판단 시",
-      "_status": "URL 미등록 — 문서 확정 후 추가"
+      "access_methods": ["attachment", "url", "notion-mcp"]
     }
   ]
 }
