@@ -1,28 +1,17 @@
-# Oshiz Mini App Harness Progress
-# 이 파일은 세션 사이 상태를 이어가기 위한 인수인계 문서다.
+# Oshiz Mini App Harness — Progress
 
----
+## 2026-03-24
 
-## Session 1 — 2026-03-24
-
-- 기본 하네스에서 파생된 `oshiz-miniapp-agent` 버전 생성
-- Oshiz 전용 특징 반영:
-  - AI 캐릭터 플랫폼 / Life App 제품 정체성
+- Oshiz Mini App 전용 하네스 초기 구성
+  - AI 캐릭터 플랫폼 / Life App 제품 정체성 반영
   - 목적 / 복잡도 / 구현 형태 분류 체계
   - 1일 / 3일 / 1주 MVP 스코프 압축 규칙
-  - IP/브랜드/캐릭터 톤 일관성 점검
-  - 재사용 산출물 중심 운영
-  - Notion 참조 레지스트리 + 로컬 fallback
-- 아직 실제 미니앱 프로젝트는 시작되지 않음
+  - IP/브랜드/캐릭터 톤 일관성 점검 루프
+  - 재사용 산출물 중심 운영 구조
+- 외부 문서 참조 방법 세 가지 지원
+  - 파일 직접 첨부 / URL 붙여넣기 / Notion MCP 자동 탐색
+  - URL 하드코딩 제거, `notion_search_query` 기반으로 전환
 
-## Session 2 — 2026-03-24
+## Next
 
-- Notion 연동 방식 변경: URL 하드코딩 제거
-  - `docs/references.json`: `url` 필드 → `notion_search_query` 필드로 교체
-  - `CLAUDE.md`: "Notion MCP 연결 절차" 섹션 추가 (notion-search → notion-fetch 자동 시작)
-  - `docs/extracted-traits.md`: Knowledge Strategy 섹션 갱신
-
-### Next Steps
-
-- 첫 Oshiz 미니앱 요청이 들어오면 분류부터 시작
-- `projects/{project-name}` 아래에 첫 프로젝트 생성
+- 첫 Oshiz 미니앱 프로젝트 시작 (`projects/{project-name}`)
